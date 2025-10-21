@@ -1,4 +1,4 @@
-name: Deploy SCSCanada.org (simple)
+name: Deploy SCSCanada.org (simple - SFTP)
 
 on:
   push:
@@ -11,13 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Upload via FTPS to HostGator
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Upload via SFTP to HostGator
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_HOST }}          # e.g., gator4445.hostgator.com
           username: ${{ secrets.FTP_USERNAME }}    # e.g., FarzamSepanta@scscanada.org
           password: ${{ secrets.FTP_PASSWORD }}    # your rotated FTP password
-          protocol: ftps
-          local-dir: site/                         # MUST end with /
-          server-dir: "${{ secrets.FTP_DIR }}/"    # MUST end with /
-          dangerous-clean-slate: true
+          local_path: site/*                       # uploads contents of /site
+          remote_path: "${{ secrets.FTP_DIR }}/"   # MUST end with /
+          sftp_only: true
