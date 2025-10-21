@@ -1,0 +1,23 @@
+name: Deploy SCSCanada.org (simple)
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Upload everything in /site to your web root
+      - name: Upload via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: site
+          server-dir: ${{ secrets.FTP_DIR }}
+          dangerous-clean-slate: true
