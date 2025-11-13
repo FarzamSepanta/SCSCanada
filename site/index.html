@@ -1,116 +1,260 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sustainable Community Solutions Canada (SCS Canada)</title>
-  <meta name="description" content="SCS Canada helps communities across Canada achieve net-zero by 2050 with equity-first programs in buildings, transport, and waste." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="bg">
-  <!-- Header / Nav -->
-  <header class="site-header container">
-    <a class="brand" href="index.html" aria-label="SCS Canada home">
-      <span class="brand-logo" aria-hidden="true">SCS</span>
-      <span class="brand-text">Sustainable Community Solutions Canada</span>
-    </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav" onclick="toggleMenu(this)">
-      <span class="menu-icon" aria-hidden="true">☰</span>
-      <span class="sr-only">Toggle navigation</span>
-    </button>
-    <nav id="site-nav" class="nav">
-      <a class="nav-link active" href="index.html">Home</a>
-      <a class="nav-link" href="affordable.html">Affordable Housing Fund I</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainable Community Solutions Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hero" id="home">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="SCS Canada home">SCS Canada</a>
+        <button class="nav__toggle" aria-controls="nav-links" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#focus">Focus Areas</a></li>
+          <li><a href="#board">Board</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero__content">
+        <div class="hero__text">
+          <p class="eyebrow">Sustainable Community Solutions Canada</p>
+          <h1>Together, we are designing resilient, people-first places to thrive.</h1>
+          <p class="lead">
+            We centre community voices to accelerate climate-ready spaces, advance energy
+            equity, and share practical knowledge that makes sustainability achievable for
+            everyone in Canada.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#mission">Learn about our mission</a>
+            <a class="btn btn--ghost" href="#stories">Explore recent stories</a>
+          </div>
+        </div>
+        <div class="hero__panel" role="presentation">
+          <div class="hero__globe">
+            <canvas id="globeCanvas" aria-hidden="true"></canvas>
+          </div>
+          <div class="hero__highlights">
+            <article>
+              <h3>Our Mission</h3>
+              <p>
+                Create healthy, low-carbon, and equitable environments where every community
+                leads its own sustainable future.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" role="presentation">
+        <span>Scroll</span>
+        <div class="mouse"></div>
+      </div>
+    </header>
 
-  <!-- Hero -->
-  <section class="hero container">
-    <h1>Supporting Canada’s communities to reach net zero by 2050</h1>
-    <p class="lead">
-      The mission of <strong>Sustainable Community Solutions Canada (SCS Canada)</strong> is to support communities in Canada
-      to achieve net-zero goals by 2050 — with equity at the center.
-    </p>
-  </section>
+    <main>
+      <section class="section section--light" id="mission">
+        <div class="container mission">
+          <div class="mission__content">
+            <h2>Mission in Action</h2>
+            <p>
+              SCS Canada mobilizes researchers, students, and community partners to bridge
+              the gap between visionary sustainability goals and the places we use every day.
+              We pair evidence-based design with local wisdom so that climate solutions are
+              accessible, culturally grounded, and economically just.
+            </p>
+          </div>
+          <div class="mission__stats">
+            <article>
+              <h3>Collaborative research</h3>
+              <p>Applying human-centred design to real-world buildings and campuses.</p>
+            </article>
+            <article>
+              <h3>Community prototypes</h3>
+              <p>Piloting scalable solutions that lower emissions while improving comfort.</p>
+            </article>
+            <article>
+              <h3>Open knowledge</h3>
+              <p>Sharing playbooks and toolkits that empower communities nationwide.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <!-- Three mission pillars -->
-  <section class="container grid">
-    <article class="card">
-      <h2>Make net zero work for everyone — especially those left out.</h2>
-      <p>
-        We help North America’s communities cut emissions in buildings, transport, and waste while lowering bills
-        and closing the energy burden gap (<em>energy equity</em>, not just energy tech).
-        DEI isn’t a side quest when it comes to net zero — for us, it’s how we prioritize projects and measure success.
-      </p>
-    </article>
+      <section class="section" id="focus">
+        <div class="container focus">
+          <header class="section__header">
+            <h2>Three Areas of Focus</h2>
+            <p>We align our work around people, place, and possibilities for a just transition.</p>
+          </header>
+          <div class="focus__grid">
+            <article class="focus__card">
+              <h3>Learning for a Sustainable Future</h3>
+              <p>
+                We collaborate with educators to design curricula, workshops, and experiential
+                learning that build climate literacy and empower lifelong sustainable habits.
+              </p>
+            </article>
+            <article class="focus__card">
+              <h3>Energy Equity &amp; Wellbeing</h3>
+              <p>
+                Our research translates into policies and retrofits that reduce energy burdens,
+                enhance comfort, and ensure every household benefits from low-carbon systems.
+              </p>
+            </article>
+            <article class="focus__card">
+              <h3>Community-Driven Futures</h3>
+              <p>
+                We convene residents, unions, and industry partners to co-create sustainable
+                neighbourhood plans grounded in cultural resilience and collective care.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <article class="card">
-      <h2>Turn climate plans into habits people actually adopt.</h2>
-      <p>
-        We co-create practical playbooks, run educational courses and public-awareness campaigns, and “teach the teachers”
-        so residents, small businesses, and community members know what to do next week — not just by 2050.
-        We create actionable roadmaps in collaboration with stakeholders and interest holders.
-      </p>
-    </article>
+      <section class="section section--light" id="board">
+        <div class="container board">
+          <header class="section__header">
+            <h2>Board of Directors</h2>
+            <p>The leadership team blends expertise in architecture, policy, and community engagement.</p>
+          </header>
+          <div class="board__grid">
+            <article class="profile">
+              <div class="profile__content">
+                <h3>Farzam, PhD</h3>
+                <p>Building performance scientist advancing smart, human-centred campuses.</p>
+                <ul>
+                  <li>Expertise: Adaptive comfort, smart building analytics</li>
+                  <li>Affiliation: Carleton University, Architectural Conservation</li>
+                </ul>
+              </div>
+            </article>
+            <article class="profile">
+              <div class="profile__content">
+                <h3>Sharane, PhD</h3>
+                <p>Community engagement strategist amplifying equity-centred collaborations.</p>
+                <ul>
+                  <li>Expertise: Participatory design, coalition building</li>
+                  <li>Affiliation: Sustainable community partnerships</li>
+                </ul>
+              </div>
+            </article>
+            <article class="profile">
+              <div class="profile__content">
+                <h3>Arya, MSc</h3>
+                <p>Energy systems advisor guiding financing models for resilient infrastructure.</p>
+                <ul>
+                  <li>Expertise: Clean energy finance, public-private partnerships</li>
+                  <li>Affiliation: National energy transition networks</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <article class="card">
-      <h2>Build resilience you can feel when the lights flicker.</h2>
-      <p>
-        We back, research, and deliver minor, major, and deep retrofits, local renewables, and community resiliency programs.
-        We focus on delivering emissions reduction, cost minimization, and closing the inequity gap.
-      </p>
-    </article>
-  </section>
+      <section class="section" id="partners">
+        <div class="container partners">
+          <header class="section__header">
+            <h2>Partners &amp; Collaborators</h2>
+            <p>We work alongside labour, academia, and innovation leaders committed to sustainable futures.</p>
+          </header>
+          <ul class="partners__list" aria-label="SCS Canada partners">
+            <li>CUPE 4600</li>
+            <li>Wesley Clover</li>
+            <li>Graduate Students' Association (GSA)</li>
+            <li>Carleton University</li>
+            <li>CUPE 2626</li>
+          </ul>
+        </div>
+      </section>
 
-  <!-- Founding members -->
-  <section class="container founders">
-    <h2>Founding Members</h2>
+      <section class="section section--light" id="stories">
+        <div class="container stories">
+          <header class="section__header">
+            <h2>Stories &amp; Thought Leadership</h2>
+            <p>Insights from our network on how people-first design is reshaping communities.</p>
+          </header>
+          <div class="story-ribbon" aria-label="Featured stories">
+            <button class="story-ribbon__control story-ribbon__control--prev" aria-label="Previous stories">&#10094;</button>
+            <div class="story-ribbon__track">
+              <a class="story-card" href="https://theconversation.com/empty-buildings-consume-more-energy-than-you-think-190203" target="_blank" rel="noopener">
+                Empty buildings consume more energy than you think
+              </a>
+              <a class="story-card" href="https://theconversation.com/no-longer-freezing-working-from-home-can-make-workplaces-more-comfortable-188122" target="_blank" rel="noopener">
+                Working from home can make workplaces more comfortable
+              </a>
+              <a class="story-card" href="https://theconversation.com/working-from-home-since-covid-19-cabin-fever-could-be-the-next-challenge-209962" target="_blank" rel="noopener">
+                Cabin fever could be the next challenge
+              </a>
+              <a class="story-card" href="https://theconversation.com/artificial-intelligence-can-support-architects-but-lacks-empathy-and-ethics-201069" target="_blank" rel="noopener">
+                AI can support architects but lacks empathy and ethics
+              </a>
+              <a class="story-card" href="https://theconversation.com/drawn-to-bustling-markets-shops-or-malls-this-holiday-season-good-vibes-could-explain-it-193188" target="_blank" rel="noopener">
+                Good vibes in bustling marketplaces
+              </a>
+              <a class="story-card" href="https://theconversation.com/how-virtual-reality-technologies-are-shaping-an-inclusive-future-for-architecture-244356" target="_blank" rel="noopener">
+                Virtual reality shaping inclusive architecture
+              </a>
+              <a class="story-card" href="https://www.scientificamerican.com/article/smart-tech-would-make-your-office-building-greener/" target="_blank" rel="noopener">
+                Smart tech would make your office building greener
+              </a>
+              <a class="story-card" href="https://www.scientificamerican.com/author/farzam-sepanta/" target="_blank" rel="noopener">
+                Scientific American author page: Farzam Sepanta
+              </a>
+              <a class="story-card" href="https://carleton.ca/news/story/empty-buildings-consume-energy/" target="_blank" rel="noopener">
+                Carleton News: empty buildings consume energy
+              </a>
+              <a class="story-card" href="https://carleton.ca/news/story/working-from-home-comfortable/" target="_blank" rel="noopener">
+                Carleton News: working from home comfortably
+              </a>
+              <a class="story-card" href="https://www.ohscanada.com/opinions/no-longer-freezing-working-from-home-can-make-workplaces-more-comfortable/" target="_blank" rel="noopener">
+                OHS Canada: no longer freezing while working from home
+              </a>
+            </div>
+            <button class="story-ribbon__control story-ribbon__control--next" aria-label="Next stories">&#10095;</button>
+          </div>
+        </div>
+      </section>
 
-    <div class="founder">
-      <h3>Dr. Farzam Sepanta</h3>
-      <p>
-        Farzam holds a PhD in Building Engineering. He is a researcher in building decarbonization and an environmental,
-        social, and governance (ESG) expert. With more than 20 published research articles and book chapters, his recent
-        work focused on quantifying emissions associated with hybrid work for the Government of Canada. Farzam has also
-        delivered courses on Architecture and Environment at Carleton University. His commitment goes beyond academia and
-        research; he is a board member of Old Ottawa South Community Association (OSCA), has conducted multiple engagement
-        programs (including equity and inclusivity in the workplace), and has been an active advocate for the community.
-        At SCS Canada, Farzam leads the work on energy equity, programs, and community engagement.
-      </p>
-      <p>
-        <a class="cta-link" href="https://farzamsepanta.github.io/" target="_blank" rel="noopener"
-           aria-label="Open Dr. Farzam Sepanta personal website">
-          Personal website
-        </a>
-      </p>
-    </div>
+      <section class="section" id="contact">
+        <div class="container contact">
+          <div class="contact__card">
+            <h2>Connect with SCS Canada</h2>
+            <p>
+              We welcome collaboration with communities, partners, and policymakers who are ready to scale sustainable change.
+            </p>
+            <ul class="contact__info">
+              <li><strong>Email:</strong> <a href="mailto:Contact@SCSCanada.org">Contact@SCSCanada.org</a></li>
+              <li><strong>Location:</strong> Ottawa, ON</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <div class="founder">
-      <h3>Arya Parsaei</h3>
-      <p>
-        Arya is a building performance researcher focused on turning community climate plans into actionable programs.
-        His work focuses on retrofits, M&amp;V pipelines, and fault detection that improves comfort and lowers bills, which
-        are a pillar in affordable and community housing. At SCS Canada, he leads the work on equitable retrofit,
-        electrification, and GHG emissions.
-      </p>
-    </div>
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>&copy; <span id="year"></span> Sustainable Community Solutions Canada. All rights reserved.</p>
+        <a href="#home" class="back-to-top">Back to top</a>
+      </div>
+    </footer>
 
-    <div class="founder">
-      <h3>Dr. Sharane Simon</h3>
-      <p>
-        Sharane is a building science and policy specialist whose work connects energy, behaviour, and resilient community
-        infrastructure. She brings deep experience translating research on telework and building use patterns, retrofit
-        pathways, and local renewables into plain language. At SCS Canada, her work focuses on policy and building
-        resilient communities.
-      </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer container">
-    <p>© <span id="year"></span> Sustainable Community Solutions Canada — All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
