@@ -46,8 +46,15 @@
           </div>
         </div>
         <div class="hero__panel" role="presentation">
-          <div class="hero__globe">
-            <canvas id="globeCanvas" aria-hidden="true"></canvas>
+          <div class="hero__visual">
+            <div class="hero__globe">
+              <canvas id="globeCanvas" aria-hidden="true"></canvas>
+            </div>
+            <div class="hero__co2-trail" aria-hidden="true">
+              <span class="hero__co2-cloud">CO₂e</span>
+              <span class="hero__co2-cloud hero__co2-cloud--delay">CO₂e</span>
+              <span class="hero__co2-cloud hero__co2-cloud--delay-long">CO₂e</span>
+            </div>
           </div>
           <div class="hero__highlights">
             <article>
@@ -183,12 +190,92 @@
             <h2>Partners &amp; Collaborators</h2>
             <p>We work alongside labour, academia, and innovation leaders committed to sustainable futures.</p>
           </header>
-          <ul class="partners__list" aria-label="SCS Canada partners">
-            <li>CUPE 4600</li>
-            <li>Wesley Clover</li>
-            <li>Graduate Students' Association (GSA)</li>
-            <li>Carleton University</li>
-            <li>CUPE 2626</li>
+          <ul class="partners__grid" aria-label="SCS Canada partners">
+            <li class="partner-card">
+              <a href="https://cupe4600.ca/" target="_blank" rel="noopener">
+                <figure class="partner-card__media">
+                  <img
+                    src="https://image.thum.io/get/width/600/crop/600/https://cupe4600.ca/"
+                    alt="Landing page preview for CUPE 4600"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  />
+                </figure>
+                <div class="partner-card__content">
+                  <span class="partner-card__name">CUPE 4600</span>
+                  <span class="partner-card__domain">cupe4600.ca</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner-card">
+              <a href="https://www.wesleyclover.com/" target="_blank" rel="noopener">
+                <figure class="partner-card__media">
+                  <img
+                    src="https://image.thum.io/get/width/600/crop/600/https://www.wesleyclover.com/"
+                    alt="Landing page preview for Wesley Clover"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  />
+                </figure>
+                <div class="partner-card__content">
+                  <span class="partner-card__name">Wesley Clover</span>
+                  <span class="partner-card__domain">wesleyclover.com</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner-card">
+              <a href="https://gsacarleton.ca/" target="_blank" rel="noopener">
+                <figure class="partner-card__media">
+                  <img
+                    src="https://image.thum.io/get/width/600/crop/600/https://gsacarleton.ca/"
+                    alt="Landing page preview for Graduate Students' Association"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  />
+                </figure>
+                <div class="partner-card__content">
+                  <span class="partner-card__name">Graduate Students' Association (GSA)</span>
+                  <span class="partner-card__domain">gsacarleton.ca</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner-card">
+              <a href="https://carleton.ca/" target="_blank" rel="noopener">
+                <figure class="partner-card__media">
+                  <img
+                    src="https://image.thum.io/get/width/600/crop/600/https://carleton.ca/"
+                    alt="Landing page preview for Carleton University"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  />
+                </figure>
+                <div class="partner-card__content">
+                  <span class="partner-card__name">Carleton University</span>
+                  <span class="partner-card__domain">carleton.ca</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner-card">
+              <a href="https://2626.ca/" target="_blank" rel="noopener">
+                <figure class="partner-card__media">
+                  <img
+                    src="https://image.thum.io/get/width/600/crop/600/https://2626.ca/"
+                    alt="Landing page preview for CUPE 2626"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  />
+                </figure>
+                <div class="partner-card__content">
+                  <span class="partner-card__name">CUPE 2626</span>
+                  <span class="partner-card__domain">2626.ca</span>
+                </div>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
